@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NITW - J4S Локалізація</title>
+  <link rel="icon" type="image/png" href="../img/J4S-logo.png">
+  <link rel="stylesheet" href="../projects/style-project.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body style="background-color: #0a0a12; font-family: 'Inter', sans-serif;">
+
+<header class="project-header">
+  <a href="../index.html" class="back-link">← Назад до проєктів</a>
+  <img src="../img/NITW-logo.png" alt="NITW Logo" class="project-header-logo">
+  <p class="project-subtitle">Українська локалізація</p>
+  <p class="project-tagline">Повний переклад гри українською мовою з адаптацією графіки та власними шрифтами</p>
+</header>
+
+<section class="project-stats">
+  <div class="stat-card">
+    <div class="stat-icon">⏳</div>
+    <div class="stat-label">Статус</div>
+    <div class="stat-value">В розробці</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon">📝</div>
+    <div class="stat-label">Прогрес</div>
+    <div class="stat-value">70%</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon">🎨</div>
+    <div class="stat-label">Графіка</div>
+    <div class="stat-value">В процесі</div>
+  </div>
+</section>
+
+<section class="project-gallery">
+  <h2>Скріншоти</h2>
+  <div class="gallery-slider" id="galleryGrid">
+    <img src="../img/Soon.png" alt="Скріншот 1">
+    <img src="../img/Soon.png" alt="Скріншот 2">
+    <img src="../img/Soon.png" alt="Скріншот 3">
+    <img src="../img/Soon.png" alt="Скріншот 4">
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  <button class="lightbox-prev">&#10094;</button>
+  <button class="lightbox-next">&#10095;</button>
+</div>
+
+<section class="project-description">
+  <h2>Що включено</h2>
+  
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">💬</div>
+      <h3>Повний текстовий переклад</h3>
+      <p>Весь діалог та текст в грі українською</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🎨</div>
+      <h3>Адаптована графіка</h3>
+      <p>Кожне зображення перекладено та відредаговано</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">✍️</div>
+      <h3>Власні шрифти</h3>
+      <p>Створено унікальні шрифти для української мови</p>
+    </div>
+  </div>
+  <p class="work-in-progress">🔧 Робота в процесі, слідкуйте за оновленнями...</p>
+</section>
+
+<section class="project-progress">
+  <h2>Прогрес локалізації</h2>
+  
+  <div class="progress-container">
+    <div class="main-progress" id="mainProgressBtn">
+      <div class="progress-header">
+        <span class="progress-label">Локалізовано</span>
+        <span class="progress-percent">70%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" style="width: 70%;"></div>
+      </div>
+      <p class="progress-hint">Натисніть для деталей</p>
+    </div>
+    
+    <div class="detailed-progress" id="detailedProgress">
+      <button class="collapse-btn" id="collapseBtn">▲ Згорнути</button>
+      
+      <div class="progress-item">
+        <div class="progress-header">
+          <span class="progress-label">Шрифти</span>
+          <span class="progress-percent">40%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress" style="width: 40%;"></div>
+        </div>
+      </div>
+      
+      <div class="progress-item">
+        <div class="progress-header">
+          <span class="progress-label">Зображення</span>
+          <span class="progress-percent">80%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress" style="width: 80%;"></div>
+        </div>
+      </div>
+      
+      <div class="progress-item">
+        <div class="progress-header">
+          <span class="progress-label">Текст</span>
+          <span class="progress-percent">48%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress" style="width: 48%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="project-guide">
+  <h2>Як встановити?</h2>
+  
+  <div class="guide-tabs">
+    <button class="guide-tab-btn active" data-tab="windows-auto"><img src="../img/Windows-logo.svg" alt="Windows" class="tab-logo"> Автоматично для Windows <span class="recommended">рекомендовано!</span></button>
+    <button class="guide-tab-btn" data-tab="windows-manual"><img src="../img/Windows-logo.svg" alt="Windows" class="tab-logo"> Вручну для Windows</button>
+    <button class="guide-tab-btn" data-tab="macos-manual"><img src="../img/Apple-logo.svg" alt="macOS" class="tab-logo"> Вручну для MacOS</button>
+  </div>
+  
+  <div class="guide-content">
+    <div id="windows-auto" class="guide-tab-content active">
+      <p style="text-align: center; padding: 40px 20px; font-size: 1.1rem; color: var(--text-muted);">
+        Інструкції з встановлення будуть доступні одразу після завершення локалізації.
+      </p>
+    </div>
+
+    <div id="windows-manual" class="guide-tab-content">
+      <p style="text-align: center; padding: 40px 20px; font-size: 1.1rem; color: var(--text-muted);">
+        Інструкції з встановлення будуть доступні одразу після завершення локалізації.
+      </p>
+    </div>
+    
+    <div id="macos-manual" class="guide-tab-content">
+      <p style="text-align: center; padding: 40px 20px; font-size: 1.1rem; color: var(--text-muted);">
+        Інструкції з встановлення будуть доступні одразу після завершення локалізації.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>&copy; 2026 J4S. Усі локалізації створені нашою командою. Ігри та бренди належать правовласникам.</p>
+</footer>
+
+<!-- Sternenko Button -->
+<a href="https://savelife.in.ua/donate/#donate-army-card-monthly" target="_blank" class="sternenko-btn">
+  <img src="../img/Sternenko.png" alt="Підтримати ЗСУ" class="sternenko-icon">
+  <span class="sternenko-text">Підтримати ЗСУ</span>
+</a>
+
+<!-- Support Button -->
+<a href="https://send.monobank.ua/jar/2ria9VvAHj" target="_blank" class="support-btn">
+  <img src="../img/heart-circle.svg" alt="Support" class="support-icon">
+  <span class="support-text">Підтримати команду</span>
+</a>
+
+<script src="script-project.js"></script>
+<script src="script-buttons.js"></script>
+</body>
+</html>

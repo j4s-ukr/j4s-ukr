@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OMORI - J4S Локалізація</title>
+  <link rel="icon" type="image/png" href="../img/J4S-logo.png">
+  <link rel="stylesheet" href="../projects/style-project.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body style="background-color: #0a0a12; font-family: 'Inter', sans-serif;">
+
+<header class="project-header">
+  <a href="../index.html" class="back-link">← Назад до проєктів</a>
+  <img src="../img/OMORI-logo.png" alt="OMORI Logo" class="project-header-logo omori-logo">
+  <p class="project-subtitle">Українська локалізація</p>
+  <p class="project-tagline">Повний переклад гри українською мовою з адаптацією графіки та власними шрифтами</p>
+</header>
+
+<section class="project-stats">
+  <div class="stat-card">
+    <div class="stat-icon">✓</div>
+    <div class="stat-label">Статус</div>
+    <div class="stat-value">Завершено</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon">📝</div>
+    <div class="stat-label">Прогрес</div>
+    <div class="stat-value">100%</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon">🎨</div>
+    <div class="stat-label">Графіка</div>
+    <div class="stat-value">Адаптовано</div>
+  </div>
+</section>
+
+<section class="project-gallery">
+  <h2>Скріншоти</h2>
+  <div class="gallery-slider" id="galleryGrid">
+    <img src="../img/OMORI-preview-4.jpg" alt="Скріншот 1">
+    <img src="../img/OMORI-preview-2.jpg" alt="Скріншот 2">
+    <img src="../img/OMORI-preview-3.jpg" alt="Скріншот 3">
+    <img src="../img/OMORI-preview-1.jpg" alt="Скріншот 4">
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  <button class="lightbox-prev">&#10094;</button>
+  <button class="lightbox-next">&#10095;</button>
+</div>
+
+<section class="project-description">
+  <h2>Що включено</h2>
+  
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">💬</div>
+      <h3>Повний текстовий переклад</h3>
+      <p>Весь діалог та текст в грі українською</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🎨</div>
+      <h3>Адаптована графіка</h3>
+      <p>Кожне зображення перекладено та відредаговано</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">✍️</div>
+      <h3>Власні шрифти</h3>
+      <p>Створено унікальні шрифти для української мови</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🎮</div>
+      <h3>Адаптовані міні-ігри</h3>
+      <p>Всі ігрові механіки працюють українською</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🎬</div>
+      <h3>Монтаж відео</h3>
+      <p>Змонтовано кінцівки та кат-сцени</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">👥</div>
+      <h3>400+ персонажів</h3>
+      <p>Адаптовано імена всіх персонажів та ворогів</p>
+    </div>
+  </div>
+</section>
+
+<section class="project-progress">
+  <h2>Прогрес локалізації</h2>
+  
+  <div class="progress-container">
+    <div class="main-progress" id="mainProgressBtn">
+      <div class="progress-header">
+        <span class="progress-label">Локалізовано</span>
+        <span class="progress-percent">100%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" style="width: 100%;"></div>
+      </div>
+      <p class="progress-hint">Натисніть для деталей</p>
+    </div>
+    
+    <div class="detailed-progress" id="detailedProgress">
+      <button class="collapse-btn" id="collapseBtn">▲ Згорнути</button>
+      
+      <div class="progress-item">
+        <div class="progress-header">
+          <span class="progress-label">Шрифти</span>
+          <span class="progress-percent">100%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress" style="width: 100%;"></div>
+        </div>
+      </div>
+      
+      <div class="progress-item">
+        <div class="progress-header">
+          <span class="progress-label">Зображення</span>
+          <span class="progress-percent">100%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress" style="width: 100%;"></div>
+        </div>
+      </div>
+      
+      <div class="progress-item">
+        <div class="progress-header">
+          <span class="progress-label">Текст</span>
+          <span class="progress-percent">100%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress" style="width: 100%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="project-guide">
+  <h2>Як встановити?</h2>
+  
+  <div class="guide-tabs">
+    <button class="guide-tab-btn active" data-tab="windows-auto"><img src="../img/Windows-logo.svg" alt="Windows" class="tab-logo"> Автоматично для Windows <span class="recommended">рекомендовано!</span></button>
+    <button class="guide-tab-btn" data-tab="windows-manual"><img src="../img/Windows-logo.svg" alt="Windows" class="tab-logo"> Вручну для Windows</button>
+    <button class="guide-tab-btn" data-tab="macos-manual"><img src="../img/Apple-logo.svg" alt="macOS" class="tab-logo"> Вручну для MacOS</button>
+  </div>
+  
+  <div class="guide-content">
+    <div id="windows-auto" class="guide-tab-content active">
+      <p><strong>LB Launcher</strong> — це найлегший спосіб встановити українізатор OMORI. Просто завантажте лаунчер і дозвольте йому автоматично встановити локалізацію!</p>
+      
+      <div class="launcher-download">
+        <a href="https://lbklauncher.com" target="_blank" class="launcher-btn">Завантажити LB Launcher</a>
+      </div>
+      
+      <h4>Як встановити українізатор:</h4>
+      <ol>
+        <li>Завантажте та запустіть <strong>LB Launcher</strong>.</li>
+        <li>У меню пошуку знайдіть гру <strong>"OMORI"</strong>.</li>
+        <li>Натисніть на картку гри, щоб переглянути доступні локалізації.</li>
+        <li>Знайдіть <strong>"J4S"</strong> і натисніть кнопку встановлення.</li>
+        <li>Дочекайтесь завершення завантаження та встановлення.</li>
+        <li>Заходьте у гру та насолоджуйтесь!</li>
+      </ol>
+    </div>
+
+    <div id="windows-manual" class="guide-tab-content">
+      <p>Ця установка включає встановлення <strong>OneLoader</strong> — моду-лаунчера для OMORI, а потім встановлення українізатора.</p>
+      
+      <h4>Крок 1: Встановлення OneLoader</h4>
+      <div class="install-buttons">
+        <a href="https://mods.one/dl/49a8af55-b0fe-4095-8d0d-8d84706960d1" target="_blank" class="install-btn">Завантажити OneLoader</a>
+      </div>
+            <div class="mod-page-link-container">
+        <a href="https://mods.one/mod/oneloader"
+          target="_blank"
+          class="mod-page-link">
+          Сторінка моду на mods.one
+        </a>
+      </div>
+      <ol>
+        <li>Розпакуйте архів.</li>
+        <li>Перекиньте папку <strong>"www"</strong> в теку з грою.</li>
+        <li>Натисніть <strong>"Замінити"</strong> при запиті.</li>
+      </ol>
+      
+      <h4>Крок 2: Встановлення українізатора</h4>
+      <div class="install-buttons">
+        <a href="https://mods.one/dl/333f55b4-e2ea-4165-a841-15e3323a6d94"
+          target="_blank"
+          class="install-btn">
+          Завантажити мод українізатор
+        </a>
+      </div>
+      <div class="mod-page-link-container">
+        <a href="https://mods.one/mod/ukrainianlang"
+          target="_blank"
+          class="mod-page-link">
+          Сторінка моду на mods.one
+        </a>
+      </div>
+      <ol>
+        <li>Розпакуйте архів з модом.</li>
+        <li>В теці з грою перейдіть в <strong>www > mods</strong>.</li>
+        <li>Перекиньте папку <strong>"ukr"</strong> в папку <strong>"mods"</strong>.</li>
+        <li>Готово! Запустіть гру та насолоджуйтесь українською локалізацією!</li>
+      </ol>
+    </div>
+    
+    <div id="macos-manual" class="guide-tab-content">
+      <p><p>Скоро. ;)</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>&copy; 2026 J4S. Усі локалізації створені нашою командою. Ігри та бренди належать правовласникам.</p>
+</footer>
+
+<!-- Sternenko Button -->
+<a href="https://savelife.in.ua/donate/#donate-army-card-monthly" target="_blank" class="sternenko-btn">
+  <img src="../img/Sternenko.png" alt="Підтримати ЗСУ" class="sternenko-icon">
+  <span class="sternenko-text">Підтримати ЗСУ</span>
+</a>
+
+<!-- Support Button -->
+<a href="https://send.monobank.ua/jar/2ria9VvAHj" target="_blank" class="support-btn">
+  <img src="../img/heart-circle.svg" alt="Support" class="support-icon">
+  <span class="support-text">Підтримати команду</span>
+</a>
+
+<script src="script-project.js"></script>
+<script src="script-buttons.js"></script>
+</body>
+</html>
