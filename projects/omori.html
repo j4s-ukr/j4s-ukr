@@ -6,38 +6,46 @@
   <title>OMORI - J4S Локалізація</title>
   <link rel="icon" type="image/png" href="../img/J4S-logo.png">
   <link rel="stylesheet" href="../projects/style-project.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body style="background-color: #0a0a12; font-family: 'Inter', sans-serif;">
+<body style="background-color: #0a0a12; font-family: 'Rubik', sans-serif;">
+
+<a href="../index.html" class="back-btn">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M19 12H5M12 19l-7-7 7-7"/>
+  </svg>
+</a>
 
 <header class="project-header">
-  <a href="../index.html" class="back-link">← Назад до проєктів</a>
-  <img src="../img/OMORI-logo.png" alt="OMORI Logo" class="project-header-logo omori-logo">
-  <p class="project-subtitle">Українська локалізація</p>
-  <p class="project-tagline">Повний переклад гри українською мовою з адаптацією графіки та власними шрифтами</p>
+  <div class="header-container">
+    <img src="../img/OMORI-logo.png" alt="OMORI Logo" class="project-logo">
+    <div class="project-meta">
+      <span class="status-badge completed">Завершено</span>
+      <span class="progress-badge">100%</span>
+    </div>
+  </div>
 </header>
 
-<section class="project-stats">
-  <div class="stat-card">
-    <div class="stat-icon">✓</div>
-    <div class="stat-label">Статус</div>
-    <div class="stat-value">Завершено</div>
+<section class="info-grid">
+  <div class="info-card">
+    <h3>Статус</h3>
+    <p>Завершено</p>
   </div>
-  <div class="stat-card">
-    <div class="stat-icon">📝</div>
-    <div class="stat-label">Прогрес</div>
-    <div class="stat-value">100%</div>
+  <div class="info-card">
+    <h3>Прогрес</h3>
+    <p>100%</p>
   </div>
-  <div class="stat-card">
-    <div class="stat-icon">🎨</div>
-    <div class="stat-label">Графіка</div>
-    <div class="stat-value">Адаптовано</div>
+  <div class="info-card">
+    <h3>Графіка</h3>
+    <p>Адаптовано</p>
   </div>
 </section>
 
-<section class="project-gallery">
+<section class="gallery-section">
   <h2>Скріншоти</h2>
-  <div class="gallery-slider" id="galleryGrid">
+  <div class="gallery-grid" id="galleryGrid">
     <img src="../img/OMORI-preview-4.jpg" alt="Скріншот 1">
     <img src="../img/OMORI-preview-2.jpg" alt="Скріншот 2">
     <img src="../img/OMORI-preview-3.jpg" alt="Скріншот 3">
@@ -53,90 +61,35 @@
   <button class="lightbox-next">&#10095;</button>
 </div>
 
-<section class="project-description">
+<section class="content-section">
   <h2>Що включено</h2>
-  
-  <div class="features-grid">
-    <div class="feature-card">
-      <div class="feature-icon">💬</div>
-      <h3>Повний текстовий переклад</h3>
-      <p>Весь діалог та текст в грі українською</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🎨</div>
-      <h3>Адаптована графіка</h3>
-      <p>Кожне зображення перекладено та відредаговано</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">✍️</div>
-      <h3>Власні шрифти</h3>
-      <p>Створено унікальні шрифти для української мови</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🎮</div>
-      <h3>Адаптовані міні-ігри</h3>
-      <p>Всі ігрові механіки працюють українською</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🎬</div>
-      <h3>Монтаж відео</h3>
-      <p>Змонтовано кінцівки та кат-сцени</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">👥</div>
-      <h3>400+ персонажів</h3>
-      <p>Адаптовано імена всіх персонажів та ворогів</p>
-    </div>
-  </div>
+  <ul class="feature-list">
+    <li>Повний текстовий переклад усіх діалогів</li>
+    <li>Адаптована графіка та зображення</li>
+    <li>Власні шрифти для української мови</li>
+    <li>Адаптовані міні-ігри</li>
+    <li>Змонтовано усі відео та кінцівки</li>
+    <li>Адаптовано 400+ імен персонажів та ворогів</li>
+  </ul>
 </section>
 
-<section class="project-progress">
-  <h2>Прогрес локалізації</h2>
-  
-  <div class="progress-container">
-    <div class="main-progress" id="mainProgressBtn">
-      <div class="progress-header">
-        <span class="progress-label">Локалізовано</span>
-        <span class="progress-percent">100%</span>
-      </div>
-      <div class="progress-bar">
-        <div class="progress" style="width: 100%;"></div>
-      </div>
-      <p class="progress-hint">Натисніть для деталей</p>
+<section class="content-section">
+  <h2>Прогрес</h2>
+  <div class="progress-list">
+    <div class="progress-row">
+      <span>Шрифти</span>
+      <div class="bar"><div class="fill" style="width: 100%"></div></div>
+      <span class="percent">100%</span>
     </div>
-    
-    <div class="detailed-progress" id="detailedProgress">
-      <button class="collapse-btn" id="collapseBtn">▲ Згорнути</button>
-      
-      <div class="progress-item">
-        <div class="progress-header">
-          <span class="progress-label">Шрифти</span>
-          <span class="progress-percent">100%</span>
-        </div>
-        <div class="progress-bar">
-          <div class="progress" style="width: 100%;"></div>
-        </div>
-      </div>
-      
-      <div class="progress-item">
-        <div class="progress-header">
-          <span class="progress-label">Зображення</span>
-          <span class="progress-percent">100%</span>
-        </div>
-        <div class="progress-bar">
-          <div class="progress" style="width: 100%;"></div>
-        </div>
-      </div>
-      
-      <div class="progress-item">
-        <div class="progress-header">
-          <span class="progress-label">Текст</span>
-          <span class="progress-percent">100%</span>
-        </div>
-        <div class="progress-bar">
-          <div class="progress" style="width: 100%;"></div>
-        </div>
-      </div>
+    <div class="progress-row">
+      <span>Зображення</span>
+      <div class="bar"><div class="fill" style="width: 100%"></div></div>
+      <span class="percent">100%</span>
+    </div>
+    <div class="progress-row">
+      <span>Текст</span>
+      <div class="bar"><div class="fill" style="width: 100%"></div></div>
+      <span class="percent">100%</span>
     </div>
   </div>
 </section>
@@ -220,22 +173,20 @@
 
 <!-- FOOTER -->
 <footer class="footer">
+  <div class="footer-support">
+    <a href="https://send.monobank.ua/jar/3Ku8FDb6zq" target="_blank" class="footer-link">
+      <span class="footer-emoji">💜</span>
+      <span>Підтримати команду</span>
+    </a>
+    <span class="footer-divider">•</span>
+    <a href="https://send.monobank.ua/jar/2JbpBYkhMv" target="_blank" class="footer-link">
+      <img src="../img/Sternenko.png" alt="Підтримати ЗСУ" class="footer-icon footer-icon-round">
+      <span>Підтримати русоріз!</span>
+    </a>
+  </div>
   <p>&copy; 2026 J4S. Усі локалізації створені нашою командою. Ігри та бренди належать правовласникам.</p>
 </footer>
 
-<!-- Sternenko Button -->
-<a href="https://savelife.in.ua/donate/#donate-army-card-monthly" target="_blank" class="sternenko-btn">
-  <img src="../img/Sternenko.png" alt="Підтримати ЗСУ" class="sternenko-icon">
-  <span class="sternenko-text">Підтримати ЗСУ</span>
-</a>
-
-<!-- Support Button -->
-<a href="https://send.monobank.ua/jar/2ria9VvAHj" target="_blank" class="support-btn">
-  <img src="../img/heart-circle.svg" alt="Support" class="support-icon">
-  <span class="support-text">Підтримати команду</span>
-</a>
-
 <script src="script-project.js"></script>
-<script src="script-buttons.js"></script>
 </body>
 </html>

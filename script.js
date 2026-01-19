@@ -10,18 +10,43 @@ let currentPhraseIndex = 0;
 const heroRotating = document.querySelector('.hero-rotating');
 
 function rotatePhrase() {
-  currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
-  heroRotating.textContent = phrases[currentPhraseIndex];
+  // Fade out and slide up
+  heroRotating.style.opacity = '0';
+  heroRotating.style.transform = 'translateY(-20px)';
   
-
-  heroRotating.style.animation = 'none';
-  void heroRotating.offsetWidth;
-  heroRotating.style.animation = 'textFadeInOut 6s ease-in-out';
+  setTimeout(() => {
+    // Change text
+    currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+    heroRotating.textContent = phrases[currentPhraseIndex];
+    
+    // Reset position for slide in from bottom
+    heroRotating.style.transform = 'translateY(20px)';
+    
+    // Fade in and slide to center
+    setTimeout(() => {
+      heroRotating.style.opacity = '1';
+      heroRotating.style.transform = 'translateY(0)';
+    }, 50);
+  }, 500);
 }
 
+// Set initial text and state
 heroRotating.textContent = phrases[0];
+heroRotating.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+heroRotating.style.opacity = '0';
+heroRotating.style.transform = 'translateY(20px)';
 
-setInterval(rotatePhrase, 6000);
+// Animate in on page load with delay
+setTimeout(() => {
+  heroRotating.style.opacity = '1';
+  heroRotating.style.transform = 'translateY(0)';
+}, 300);
+
+// Start rotation after initial delay
+setTimeout(() => {
+  rotatePhrase();
+  setInterval(rotatePhrase, 4000);
+}, 3300);
 
 const btn = document.querySelector('.hero-btn');
 
