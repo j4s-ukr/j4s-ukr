@@ -483,6 +483,12 @@ body::before {
   border: 1px solid rgba(109, 213, 237, 0.4);
 }
 
+.project-badge.cancelled {
+  background: rgba(220, 38, 38, 0.2);
+  color: #ef4444;
+  border: 1px solid rgba(220, 38, 38, 0.4);
+}
+
 .coming-soon-placeholder {
   color: rgba(255, 255, 255, 0.15);
   z-index: 2;
