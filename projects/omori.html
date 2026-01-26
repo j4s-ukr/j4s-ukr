@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OMORI - J4S Локалізація</title>
   <link rel="icon" type="image/png" href="../img/J4S-logo.png">
+  <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../projects/style-project.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body style="background-color: #0a0a12; font-family: 'Rubik', sans-serif;">
+<body>
 
 <a href="../index.html" class="back-btn">
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -29,27 +30,25 @@
 </header>
 
 <section class="info-grid">
-  <div class="info-card">
-    <h3>Статус</h3>
-    <p>Завершено</p>
-  </div>
-  <div class="info-card">
-    <h3>Прогрес</h3>
-    <p>100%</p>
-  </div>
-  <div class="info-card">
-    <h3>Графіка</h3>
-    <p>Адаптовано</p>
+  <div class="localization-description">
+    <h2 style="margin-bottom: 12px; font-size: 1.35rem; color: var(--accent); font-weight: 700;">OMORI українською</h2>
+    <div style="background: rgba(255,255,255,0.04); border-radius: 14px; padding: 18px 22px; box-shadow: 0 2px 12px rgba(0,0,0,0.04);">
+      <p style="font-size: 1.09rem; color: var(--text-dim); margin-bottom: 10px;">
+        <strong>OMORI</strong> — це психологічна інді-гра з елементами JRPG та жаху про травму, втечу від реальності й прийняття болючих спогадів. Вона поєднує милий візуальний стиль із темними темами, сильним сюжетом і важкими моральними виборами.
+      </p>
+      <p style="font-size: 1.04rem; color: var(--text-dim);">
+        Переклад виконано з особливою увагою до деталей: адаптовано всі діалоги, меню, графічні елементи та навіть міні-ігри. Ми прагнули зберегти стиль, гумор і настрій оригіналу, щоб OMORI звучала природно та автентично українською.
+      </p>
+    </div>
   </div>
 </section>
 
 <section class="gallery-section">
   <h2>Скріншоти</h2>
   <div class="gallery-grid" id="galleryGrid">
-    <img src="../img/OMORI-preview-4.jpg" alt="Скріншот 1">
-    <img src="../img/OMORI-preview-2.jpg" alt="Скріншот 2">
-    <img src="../img/OMORI-preview-3.jpg" alt="Скріншот 3">
-    <img src="../img/OMORI-preview-1.jpg" alt="Скріншот 4">
+    <img src="../img/OMORI-preview-4.jpg" alt="Скріншот 1" class="gallery-img" tabindex="0" aria-label="Скріншот 1">
+    <img src="../img/OMORI-preview-3.jpg" alt="Скріншот 3" class="gallery-img" tabindex="0" aria-label="Скріншот 3">
+    <img src="../img/OMORI-preview-1.jpg" alt="Скріншот 4" class="gallery-img" tabindex="0" aria-label="Скріншот 4">
   </div>
 </section>
 
@@ -98,9 +97,9 @@
   <h2>Як встановити?</h2>
   
   <div class="guide-tabs">
-    <button class="guide-tab-btn active" data-tab="windows-auto"><img src="../img/Windows-logo.svg" alt="Windows" class="tab-logo"> Автоматично для Windows <span class="recommended">рекомендовано!</span></button>
+    <button class="guide-tab-btn active" data-tab="windows-auto"><img src="../img/Windows-logo.svg" alt="Windows" class="tab-logo"> Автоматично для Windows <span class="recommended">(рекомендовано!)</span></button>
     <button class="guide-tab-btn" data-tab="windows-manual"><img src="../img/Windows-logo.svg" alt="Windows" class="tab-logo"> Вручну для Windows</button>
-    <button class="guide-tab-btn" data-tab="macos-manual"><img src="../img/Apple-logo.svg" alt="macOS" class="tab-logo"> Вручну для MacOS</button>
+    <button class="guide-tab-btn" data-tab="macos-manual"><img src="../img/Apple-logo.svg" alt="macOS" class="tab-logo"> Вручну для macOS</button>
   </div>
   
   <div class="guide-content">
@@ -127,7 +126,7 @@
       
       <h4>Крок 1: Встановлення OneLoader</h4>
       <div class="install-buttons">
-        <a href="https://mods.one/dl/49a8af55-b0fe-4095-8d0d-8d84706960d1" target="_blank" class="install-btn">Завантажити OneLoader          
+        <a href="../mods/OneLoader-1.5.zip" download class="install-btn">Завантажити OneLoader
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 8px;">
         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
         <polyline points="7 10 12 15 17 10"></polyline>
@@ -149,14 +148,12 @@
       
       <h4>Крок 2: Встановлення українізатора</h4>
       <div class="install-buttons">
-        <a href="https://mods.one/dl/333f55b4-e2ea-4165-a841-15e3323a6d94"
-          target="_blank"
-          class="install-btn">
+        <a href="../mods/ukr.zip" download class="install-btn">
           Завантажити українізатор
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 8px;">
-        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-        <polyline points="7 10 12 15 17 10"></polyline>
-        <line x1="12" y1="15" x2="12" y2="3"></line>
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
           </svg>
         </a>
       </div>
@@ -176,7 +173,29 @@
     </div>
     
     <div id="macos-manual" class="guide-tab-content">
-      <p><p>Скоро. ;)</p>
+        <p style="margin-bottom: 12px; color: #ffb300; font-weight: 500;">
+          <strong>Увага!</strong> В українізаторі використовується патч для запуску OMORI на процесорах Apple Silicon (M1/M2/M3 і т.д.). Можливі проблеми зі стабільністю гри, оскільки офіційної підтримки macOS ARM немає. Якщо виникають збої — спробуйте перезапустити гру.
+        </p>
+        <div class="install-buttons">
+          <a href="../mods/OMORI-UKR-MAC-OS.zip" download class="install-btn">
+            Завантажити архів з українізатором
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 8px;">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </a>
+        </div>
+        <ol>
+          <li>Переходимо у локальні файли гри у Steam</li>
+          <li>Відкриваємо властивості елементу <strong>OMORI.app</strong >, натискаємо “Показати вміст пакета”</li>
+          <li>Переходимо за шляхом: <strong>Contents/Resources/app.nw</strong></li>
+          <li>Видобуваємо папку з архіву <strong>OMORI-UKR-MAC-OS.zip</strong> в зручне місце</li>
+          <li>Відкриваємо папку та копіюємо увесь вміст</li>
+          <li>Повертаємось до теки з грою та вставляємо елементи в папку <strong>app.nw</strong></li>
+          <li>Натискаємо “Замінити”</li>
+          <li>Готово, заходимо у гру!</li>
+        </ol>
     </div>
   </div>
 </section>

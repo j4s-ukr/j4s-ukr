@@ -162,9 +162,13 @@ a {
   width: 100%;
   height: auto;
   border-radius: 8px;
-  border: 1px solid var(--border);
-  transition: all 0.3s ease;
-  cursor: pointer;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: #181824;
+    opacity: 1 !important;
+    position: relative;
+    z-index: 1;
 }
 
 .gallery-grid img:hover {
@@ -174,16 +178,36 @@ a {
 
 /* === LIGHTBOX === */
 .lightbox {
+/* === GALLERY IMG === */
+.gallery-img {
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+.gallery-img:hover, .gallery-img:focus {
+  box-shadow: 0 0 0 2px var(--accent), 0 2px 8px rgba(0,0,0,0.12);
+}
   display: none;
   position: fixed;
   z-index: 999;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.95);
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  transition: opacity 0.35s cubic-bezier(.4,0,.2,1);
+  pointer-events: none;
+}
+
+.lightbox.active {
+  display: flex;
+  pointer-events: auto;
+}
+
+.lightbox.show {
+  opacity: 1;
 }
 
 .lightbox.active {
@@ -191,18 +215,22 @@ a {
 }
 
 .lightbox-img {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 90vw;
+  max-height: 80vh;
   object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.45);
+  background: #181824;
 }
 
 .lightbox-close {
   position: absolute;
-  top: 30px;
-  right: 50px;
-  font-size: 40px;
+  top: 24px;
+  right: 24px;
+  font-size: 36px;
   color: #fff;
   cursor: pointer;
+  z-index: 2;
 }
 
 .lightbox-close:hover {
@@ -210,24 +238,32 @@ a {
 }
 
 .lightbox-prev,
-.lightbox-next {
+  .lightbox-next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   font-size: 40px;
   color: #fff;
-  background: none;
+  background: rgba(24,24,36,0.7);
   border: none;
   cursor: pointer;
-  padding: 20px;
+  padding: 16px;
+  border-radius: 50%;
+  z-index: 2;
+  transition: background 0.2s;
+}
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  color: var(--accent);
+  background: rgba(57,246,143,0.12);
 }
 
 .lightbox-prev {
-  left: 30px;
+  left: 16px;
 }
 
 .lightbox-next {
-  right: 30px;
+  right: 16px;
 }
 
 .lightbox-prev:hover,
@@ -368,8 +404,17 @@ a {
 .tab-logo {
   height: 18px;
   width: auto;
-  opacity: 0.6;
-  filter: grayscale(1);
+  /* opacity: 0.6; */
+  filter: grayscale(1) brightness(2);
+}
+
+/* Активна вкладка — просто трохи темніше, але все ще світле */
+.guide-tab-btn.active .tab-logo[alt="macOS"] {
+  filter: grayscale(1) brightness(1.2);
+}
+
+.tab-logo[alt="macOS"] {
+  filter: grayscale(0) brightness(0) sepia(1) hue-rotate(120deg) saturate(8) contrast(1.2);
 }
 
 .guide-tab-btn:hover .tab-logo {
@@ -378,7 +423,7 @@ a {
 }
 
 .guide-tab-btn.active .tab-logo {
-  opacity: 1;
+  /* opacity: 1; */
   filter: brightness(0);
 }
 
@@ -600,27 +645,37 @@ a {
     font-size: 32px;
   }
 
+  .lightbox-close {
+    right: 12px;
+    top: 12px;
+    font-size: 28px;
+  }
+
   .lightbox-prev,
   .lightbox-next {
-    font-size: 32px;
-    padding: 16px;
+    font-size: 28px;
+    padding: 10px;
   }
 
   .lightbox-prev {
-    left: 16px;
+    left: 6px;
   }
 
   .lightbox-next {
-    right: 16px;
+    right: 6px;
+  }
+  .tab-logo[alt="macOS"] {
+    filter: invert(80%) sepia(100%) saturate(500%) hue-rotate(160deg) brightness(1.2);
   }
 
-  .footer-support {
-    gap: 10px;
+  .guide-tab-btn.active .tab-logo[alt="macOS"] {
+    filter: invert(70%) sepia(100%) saturate(500%) hue-rotate(160deg) brightness(1.1);
   }
-
-  .footer-link {
-    padding: 6px 12px;
-    font-size: 0.8rem;
+  }
+  
+  /* Активна вкладка — трохи менше яскравості, але все ще світле */
+  .guide-tab-btn.active .tab-logo[alt="macOS"] {
+    filter: grayscale(1) brightness(1.2);
   }
 
   .footer-divider {
@@ -633,9 +688,28 @@ a {
     height: 20px;
     font-size: 20px;
   }
-}
 
 @media (max-width: 480px) {
+    .lightbox-img {
+      max-width: 98vw;
+      max-height: 60vh;
+    }
+    .lightbox-close {
+      right: 6px;
+      top: 6px;
+      font-size: 22px;
+    }
+    .lightbox-prev,
+    .lightbox-next {
+      font-size: 22px;
+      padding: 6px;
+    }
+    .lightbox-prev {
+      left: 2px;
+    }
+    .lightbox-next {
+      right: 2px;
+    }
   .install-buttons {
     flex-direction: column;
   }
