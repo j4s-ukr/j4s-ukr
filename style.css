@@ -372,7 +372,7 @@ body::before {
 /* === PROJECTS === */
 .projects {
   padding: clamp(80px, 12vh, 120px) clamp(20px, 5vw, 60px);
-  position: relative;
+  margin-bottom: clamp(24px, 4vh, 36px);
   z-index: 1;
 }
 
@@ -565,9 +565,6 @@ body::before {
   transform: translate(2px, -2px);
 }
 
-.project-item.coming-soon {
-  opacity: 0.7;
-}
 
 .project-item.coming-soon:hover {
   transform: translateY(-4px);
@@ -640,12 +637,10 @@ body::before {
   margin: 0 0 clamp(50px, 8vh, 70px) 0;
 }
 
-.team-category {
-  margin-bottom: clamp(40px, 8vh, 60px);
-}
 
-.team-category:last-child {
-  margin-bottom: 0;
+
+.team-category {
+  margin-bottom: clamp(20px, 30vh, 20px);
 }
 
 .category-label {
@@ -654,7 +649,7 @@ body::before {
   color: #39F68F;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin: 0 0 clamp(20px, 4vh, 28px) 0;
+  margin: 0 0 clamp(8px, 1.5vh, 14px) 0;
   text-align: center;
 }
 
@@ -702,7 +697,7 @@ body::before {
 
 /* --- THANKS SECTION --- */
 .thanks {
-  padding: clamp(60px, 12vh, 100px) clamp(20px, 5vw, 60px);
+  padding: clamp(0px, 12vh, 200px) clamp(0px, 5vw, 0px);
   text-align: center;
 }
 
@@ -717,7 +712,7 @@ body::before {
 .thanks-subtitle {
   font-size: clamp(1rem, 2vw, 1.15rem);
   color: #a0aec0;
-  margin-bottom: clamp(50px, 8vh, 70px);
+  margin-bottom: clamp(50px, 8vh, 30px);
 }
 
 .thanks-scroll-wrapper {
@@ -725,13 +720,11 @@ body::before {
   overflow: hidden;
   width: 100%;
   max-width: 100%;
-  padding: 20px 0;
-  margin: -20px 0;
 }
 
 .thanks-scroll {
   display: flex;
-  gap: 30px;
+  gap: 35px;
   animation: scrollLeft 40s linear infinite;
   width: fit-content;
 }
@@ -1266,7 +1259,7 @@ body::before {
 
 /* --- FOOTER --- */
 .footer {
-  padding: clamp(40px, 6vh, 60px) clamp(20px, 5vw, 60px);
+  padding: clamp(10px, 6vh, 10px) clamp(10px, 5vw, 10px);
   text-align: center;
   color: #a0aec0;
   font-size: 0.95rem;
