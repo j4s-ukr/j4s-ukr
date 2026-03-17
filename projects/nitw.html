@@ -45,26 +45,34 @@
 <section class="gallery-section">
   <h2>Скриншоти</h2>
   <div class="gallery-grid" id="galleryGrid">
-    <img src="../img/Soon.png" alt="Скріншот 1" class="gallery-img" tabindex="0" aria-label="Скріншот 1">
-    <img src="../img/Soon.png" alt="Скріншот 2" class="gallery-img" tabindex="0" aria-label="Скріншот 2">
-    <img src="../img/Soon.png" alt="Скріншот 3" class="gallery-img" tabindex="0" aria-label="Скріншот 3">
+    <img src="../img/NITW-prewview-1.jpg" alt="Скриншот 1" class="gallery-img" tabindex="0" aria-label="Скриншот 1">
+    <img src="../img/NITW-prewview-2.jpg" alt="Скриншот 2" class="gallery-img" tabindex="0" aria-label="Скриншот 2">
+    <img src="../img/NITW-prewview-4.jpg" alt="Скриншот 3" class="gallery-img" tabindex="0" aria-label="Скриншот 3">
   </div>
 </section>
 
 <!-- Lightbox -->
-<div id="lightbox" class="lightbox">
-  <span class="lightbox-close">&times;</span>
-  <img class="lightbox-img" id="lightbox-img" src="" alt="">
-  <button class="lightbox-prev">&#10094;</button>
-  <button class="lightbox-next">&#10095;</button>
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Повноекранний перегляд зображення">
+  <button class="lightbox-close" type="button" aria-label="Закрити перегляд">&times;</button>
+  <button class="lightbox-prev" type="button" aria-label="Попереднє зображення">&#10094;</button>
+  <figure class="lightbox-figure">
+    <img class="lightbox-img" id="lightbox-img" src="" alt="">
+    <figcaption class="lightbox-caption">
+      <span class="lightbox-counter" id="lightbox-counter"></span>
+      <span class="lightbox-caption-text" id="lightbox-caption"></span>
+    </figcaption>
+  </figure>
+  <button class="lightbox-next" type="button" aria-label="Наступне зображення">&#10095;</button>
 </div>
 
 <section class="content-section">
   <h2>Вміст локалізації</h2>
   <ul class="feature-list">
-    <li>Текстовий переклад</li>
-    <li>Перемальовування графічних зображень</li>
-    <li>Створення власних шрифтів із застосуванням кирилиці</li>
+    <li>Текстовий переклад усіх діалогів</li>
+    <li>Повний переклад інтерфейсу та меню</li>
+    <li>Переклад усіх текстур та анімацій</li>
+    <li>Власні шрифти із застосуванням кирилиці</li>
+    <li>Переклад та адаптація міні-ігор</li>
   </ul>
   <p style="text-align: center; margin-top: 32px; color: var(--text-dim); font-style: italic;">🔧 Робота в процесі, слідкуйте за оновленнями...</p>
 </section>
@@ -74,18 +82,18 @@
   <div class="progress-list">
     <div class="progress-row">
       <span>Шрифти</span>
-      <div class="bar"><div class="fill" style="width: 40%"></div></div>
-      <span class="percent">40%</span>
+      <div class="bar"><div class="fill" style="width: 70%"></div></div>
+      <span class="percent">70%</span>
     </div>
     <div class="progress-row">
-      <span>Зображення</span>
-      <div class="bar"><div class="fill" style="width: 80%"></div></div>
-      <span class="percent">80%</span>
+      <span>Текстури</span>
+      <div class="bar"><div class="fill" style="width: 92%"></div></div>
+      <span class="percent">92%</span>
     </div>
     <div class="progress-row">
       <span>Текст</span>
-      <div class="bar"><div class="fill" style="width: 48%"></div></div>
-      <span class="percent">48%</span>
+      <div class="bar"><div class="fill" style="width: 84%"></div></div>
+      <span class="percent">84%</span>
     </div>
   </div>
 </section>
@@ -102,19 +110,19 @@
   <div class="guide-content">
     <div id="windows-auto" class="guide-tab-content active">
       <p style="text-align: center; padding: 40px 20px; font-size: 1.1rem; color: var(--text-muted);">
-        Інструкції з встановлення будуть доступні одразу після завершення локалізації.
+        Підпишіться на оновлення в <a href="https://lbklauncher.com/games/night_in_the_woods/j4s" class="mod-page-link" style="font-size: 18px;"><u>LBK Launcher</u> </a>, щоб отримати сповіщення після виходу локалізації з можливістю автоматичного встановлення.
       </p>
     </div>
 
     <div id="windows-manual" class="guide-tab-content">
       <p style="text-align: center; padding: 40px 20px; font-size: 1.1rem; color: var(--text-muted);">
-        Інструкції з встановлення будуть доступні одразу після завершення локалізації.
+        Підпишіться на оновлення в <a href="https://lbklauncher.com/games/night_in_the_woods/j4s" class="mod-page-link" style="font-size: 18px;"><u>LBK Launcher</u> </a>, щоб отримати сповіщення після виходу локалізації з можливістю автоматичного встановлення.
       </p>
     </div>
     
     <div id="macos-manual" class="guide-tab-content">
       <p style="text-align: center; padding: 40px 20px; font-size: 1.1rem; color: var(--text-muted);">
-        Інструкції з встановлення будуть доступні одразу після завершення локалізації.
+        Підпишіться на оновлення в <a href="https://lbklauncher.com/games/night_in_the_woods/j4s" class="mod-page-link" style="font-size: 18px;"><u>LBK Launcher</u> </a>, щоб отримати сповіщення після виходу локалізації з можливістю автоматичного встановлення.
       </p>
     </div>
   </div>

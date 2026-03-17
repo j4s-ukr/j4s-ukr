@@ -45,18 +45,24 @@
 <section class="gallery-section">
   <h2>Скриншоти</h2>
   <div class="gallery-grid" id="galleryGrid">
-    <img src="../img/OMORI-preview-4.jpg" alt="Скріншот 1" class="gallery-img" tabindex="0" aria-label="Скріншот 1">
-    <img src="../img/OMORI-preview-3.jpg" alt="Скріншот 3" class="gallery-img" tabindex="0" aria-label="Скріншот 3">
-    <img src="../img/OMORI-preview-1.jpg" alt="Скріншот 4" class="gallery-img" tabindex="0" aria-label="Скріншот 4">
+    <img src="../img/OMORI-preview-4.jpg" alt="Скриншот 1" class="gallery-img" tabindex="0" aria-label="Скриншот 1">
+    <img src="../img/OMORI-preview-3.jpg" alt="Скриншот 3" class="gallery-img" tabindex="0" aria-label="Скриншот 3">
+    <img src="../img/OMORI-preview-1.jpg" alt="Скриншот 4" class="gallery-img" tabindex="0" aria-label="Скриншот 4">
   </div>
 </section>
 
 <!-- Lightbox -->
-<div id="lightbox" class="lightbox">
-  <span class="lightbox-close">&times;</span>
-  <img class="lightbox-img" id="lightbox-img" src="" alt="">
-  <button class="lightbox-prev">&#10094;</button>
-  <button class="lightbox-next">&#10095;</button>
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Повноекранний перегляд зображення">
+  <button class="lightbox-close" type="button" aria-label="Закрити перегляд">&times;</button>
+  <button class="lightbox-prev" type="button" aria-label="Попереднє зображення">&#10094;</button>
+  <figure class="lightbox-figure">
+    <img class="lightbox-img" id="lightbox-img" src="" alt="">
+    <figcaption class="lightbox-caption">
+      <span class="lightbox-counter" id="lightbox-counter"></span>
+      <span class="lightbox-caption-text" id="lightbox-caption"></span>
+    </figcaption>
+  </figure>
+  <button class="lightbox-next" type="button" aria-label="Наступне зображення">&#10095;</button>
 </div>
 
 <section class="content-section">
@@ -103,15 +109,15 @@
   
   <div class="guide-content">
     <div id="windows-auto" class="guide-tab-content active">
-      <p><strong>LB Launcher</strong> — це найлегший спосіб інсталювати нашу локалізацію на OMORI. Завдяки ньому, ви маєте можливість встановити переклад автоматично, здійснивши при цьому кілька кліків!</p>
+      <p><strong>LBK Launcher</strong> — це найлегший спосіб інсталювати нашу локалізацію на OMORI. Завдяки ньому, ви маєте можливість встановити переклад автоматично, здійснивши при цьому кілька кліків!</p>
       
       <div class="launcher-download">
-        <a href="https://lbklauncher.com" target="_blank" class="launcher-btn">Перейти на сайт LB Launcher</a>
+        <a href="https://lbklauncher.com" target="_blank" class="launcher-btn">Перейти на сайт LBK Launcher</a>
       </div>
       
       <h4>Як встановити українізатор:</h4>
       <ol>
-        <li>Перейдіть за посиланням вище та завантажте <strong>LB Launcher</strong>.</li>
+        <li>Перейдіть за посиланням вище та завантажте <strong>LBK Launcher</strong>.</li>
         <li>Запустіть його.</li>
         <li>Знайдіть гру <strong>"OMORI"</strong>, використовуючи поле "Пошук гри...".</li>
         <li>Натисніть на вкладку гри й оберіть <strong>J4S</strong>.</li>
