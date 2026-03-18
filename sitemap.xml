@@ -9,17 +9,22 @@
 
 <url>
   <loc>https://j4s-ukr.github.io/j4s-ukr/</loc>
-  <lastmod>2026-03-18T23:30:22+00:00</lastmod>
+  <lastmod>2026-03-18T23:38:28+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://j4s-ukr.github.io/j4s-ukr/index.html</loc>
+  <lastmod>2026-03-18T23:38:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://j4s-ukr.github.io/j4s-ukr/projects/omori.html</loc>
-  <lastmod>2026-03-18T23:30:22+00:00</lastmod>
+  <lastmod>2026-03-18T23:38:28+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://j4s-ukr.github.io/j4s-ukr/projects/nitw.html</loc>
-  <lastmod>2026-03-18T23:30:22+00:00</lastmod>
+  <lastmod>2026-03-18T23:38:28+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
