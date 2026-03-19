@@ -100,11 +100,10 @@ body {
 }
 
 .site-nav-link.donate-link::before {
-  content: "❤";
+  content: "💜";
   font-size: 0.85rem;
   line-height: 1;
   color: #d896ff;
-  transform: translateY(2px);
 }
 
 .site-nav-link.donate-link:hover {
@@ -167,6 +166,8 @@ body {
   gap: 5px;
   cursor: pointer;
   justify-self: end;
+  -webkit-tap-highlight-color: transparent;
+  transform: translateZ(0);
 }
 
 .site-menu-toggle span {
@@ -175,22 +176,27 @@ body {
   background: currentColor;
   border-radius: 2px;
   transition: transform 0.2s ease, opacity 0.2s ease;
+  transform: translateZ(0);
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .mobile-menu {
   display: none;
 }
 
-.site-header.menu-open .site-menu-toggle span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+.site-menu-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translate3d(0, 7px, 0) rotate(45deg);
 }
 
-.site-header.menu-open .site-menu-toggle span:nth-child(2) {
+.site-menu-toggle[aria-expanded="true"] span:nth-child(2) {
   opacity: 0;
+  transform: translateZ(0);
 }
 
-.site-header.menu-open .site-menu-toggle span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+.site-menu-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translate3d(0, -7px, 0) rotate(-45deg);
 }
 
 body::before {
@@ -503,7 +509,7 @@ body::before {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .site-header-inner {
     grid-template-columns: 1fr auto;
     justify-items: stretch;
@@ -582,11 +588,10 @@ body::before {
   }
 
   .mobile-menu-link.donate-link-mobile::before {
-    content: "❤";
+    content: "💜";
     font-size: 0.85rem;
     line-height: 1;
     color: #d896ff;
-    transform: translateY(2px);
   }
 
   .mobile-menu-socials {
