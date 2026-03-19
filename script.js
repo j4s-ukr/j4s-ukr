@@ -10,6 +10,10 @@ let currentPhraseIndex = 0;
 const heroRotating = document.querySelector('.hero-rotating');
 
 function rotatePhrase() {
+  if (!heroRotating) {
+    return;
+  }
+
   // Fade out and slide up
   heroRotating.style.opacity = '0';
   heroRotating.style.transform = 'translateY(-20px)';
@@ -30,66 +34,72 @@ function rotatePhrase() {
   }, 500);
 }
 
-// Set initial text and state
-heroRotating.textContent = phrases[0];
-heroRotating.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-heroRotating.style.opacity = '0';
-heroRotating.style.transform = 'translateY(20px)';
+if (heroRotating) {
+  // Set initial text and state
+  heroRotating.textContent = phrases[0];
+  heroRotating.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  heroRotating.style.opacity = '0';
+  heroRotating.style.transform = 'translateY(20px)';
 
-// Animate in on page load with delay
-setTimeout(() => {
-  heroRotating.style.opacity = '1';
-  heroRotating.style.transform = 'translateY(0)';
-}, 300);
+  // Animate in on page load with delay
+  setTimeout(() => {
+    heroRotating.style.opacity = '1';
+    heroRotating.style.transform = 'translateY(0)';
+  }, 300);
 
-// Start rotation after initial delay
-setTimeout(() => {
-  rotatePhrase();
-  setInterval(rotatePhrase, 4000);
-}, 3300);
+  // Start rotation after initial delay
+  setTimeout(() => {
+    rotatePhrase();
+    setInterval(rotatePhrase, 4000);
+  }, 3300);
+}
 
 const btn = document.querySelector('.hero-btn');
 
-btn.addEventListener('mousemove', (e) => {
-  const rect = btn.getBoundingClientRect();
-  const x = (e.clientX - rect.left) / rect.width - 0.5;
-  const y = (e.clientY - rect.top) / rect.height - 0.5;
-  btn.style.transform = `scale(1.07) translate(${x*6}px, ${y*6}px)`;
-});
+if (btn) {
+  btn.addEventListener('mousemove', (e) => {
+    const rect = btn.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    btn.style.transform = `scale(1.07) translate(${x * 6}px, ${y * 6}px)`;
+  });
 
-btn.addEventListener('mouseleave', () => {
-  btn.style.transform = '';
-});
+  btn.addEventListener('mouseleave', () => {
+    btn.style.transform = '';
+  });
+}
 
 const logoWrapper = document.querySelector('.logo-wrapper');
 const hero = document.querySelector('.hero');
 
-setTimeout(() => {
-  logoWrapper.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
-  
-  hero.addEventListener('mousemove', (e) => {
-    const rect = logoWrapper.getBoundingClientRect();
-    const logoCenterX = rect.left + rect.width / 2;
-    const logoCenterY = rect.top + rect.height / 2;
-    
-    const deltaX = e.clientX - logoCenterX;
-    const deltaY = e.clientY - logoCenterY;
-    
-    let rotateX = (deltaY / rect.height) * -8;
-    let rotateY = (deltaX / rect.width) * 8;
-    
-    rotateX = Math.max(-8, Math.min(8, rotateX));
-    rotateY = Math.max(-8, Math.min(8, rotateY));
-    
-    logoWrapper.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
-    logoWrapper.style.transition = 'transform 0.3s ease-out';
-  });
-
-  hero.addEventListener('mouseleave', () => {
+if (logoWrapper && hero) {
+  setTimeout(() => {
     logoWrapper.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
-    logoWrapper.style.transition = 'transform 0.8s ease-out';
-  });
-}, 1800);
+    
+    hero.addEventListener('mousemove', (e) => {
+      const rect = logoWrapper.getBoundingClientRect();
+      const logoCenterX = rect.left + rect.width / 2;
+      const logoCenterY = rect.top + rect.height / 2;
+      
+      const deltaX = e.clientX - logoCenterX;
+      const deltaY = e.clientY - logoCenterY;
+      
+      let rotateX = (deltaY / rect.height) * -8;
+      let rotateY = (deltaX / rect.width) * 8;
+      
+      rotateX = Math.max(-8, Math.min(8, rotateX));
+      rotateY = Math.max(-8, Math.min(8, rotateY));
+      
+      logoWrapper.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+      logoWrapper.style.transition = 'transform 0.3s ease-out';
+    });
+
+    hero.addEventListener('mouseleave', () => {
+      logoWrapper.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
+      logoWrapper.style.transition = 'transform 0.8s ease-out';
+    });
+  }, 1800);
+}
 
 const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
 
@@ -135,10 +145,12 @@ if (teamToggle && teamContent) {
     teamContent.classList.toggle('expanded');
     
     const span = this.querySelector('span');
-    if (teamContent.classList.contains('expanded')) {
-      span.textContent = 'Сховати команду';
-    } else {
-      span.textContent = 'Показати команду';
+    if (span) {
+      if (teamContent.classList.contains('expanded')) {
+        span.textContent = 'Сховати команду';
+      } else {
+        span.textContent = 'Показати команду';
+      }
     }
   });
 }
