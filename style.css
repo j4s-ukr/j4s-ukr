@@ -6,6 +6,13 @@
   --accent: #39F68F;
   --accent-dark: #2fae71;
   --underline: #6dd5ed;
+  --safe-area-top: env(safe-area-inset-top, 0px);
+}
+
+@supports (padding-top: constant(safe-area-inset-top)) {
+  :root {
+    --safe-area-top: constant(safe-area-inset-top);
+  }
 }
 
 /* --- GLOBAL --- */
@@ -27,12 +34,26 @@ body {
 
 /* --- SITE HEADER --- */
 .site-header {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1200;
+  isolation: isolate;
   backdrop-filter: blur(12px);
   background: rgba(8, 8, 15, 0.72);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.site-header::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(-1 * var(--safe-area-top));
+  height: var(--safe-area-top);
+  background: rgba(8, 8, 15, 0.72);
+  pointer-events: none;
+  z-index: -1;
 }
 
 .site-header-inner {
